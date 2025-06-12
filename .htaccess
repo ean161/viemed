@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Skip existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite /xxx to /view/screen/xxx.php
+RewriteRule ^([^/]+)$ /view/screen/$1.php [L]
